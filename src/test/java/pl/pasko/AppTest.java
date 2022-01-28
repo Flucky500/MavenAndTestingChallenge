@@ -1,23 +1,34 @@
 package pl.pasko;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
+public class AppTest {
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void shouldCheckIfAdult()
-    {
-        assertTrue(IsAdult.isAdult(18));
-        assertFalse(IsAdult.isAdult(12));
-        assertFalse(IsAdult.isAdult(-1));
+    public void shouldReturnTrueIfAgeIs18() {
+        //given
+        int age = 18;
+        //when
+        boolean result = AdultChecker.isAdult(age);
+        //then
+        assertTrue(result);
+    }
+    @Test
+    public void shouldReturnFalseIfAgeIs15() {
+        //given
+        int age = 15;
+        //when
+        boolean result = AdultChecker.isAdult(age);
+        //then
+        assertFalse(result);
     }
 }

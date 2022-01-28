@@ -8,6 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println(IsAdult.isAdult(100));
+        System.out.println(AdultChecker.isAdult(100));
     }
 }
