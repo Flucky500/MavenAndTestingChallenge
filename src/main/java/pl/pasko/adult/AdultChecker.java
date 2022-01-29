@@ -1,4 +1,4 @@
-package pl.pasko;
+package pl.pasko.adult;
 
 public class AdultChecker {
 
